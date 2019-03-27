@@ -51,7 +51,7 @@ Go over some notebook basics: Adding cells, writing code and running cells, etc.
 ### Main course content
 Start marching down the notebook: Strings, numbers, some basic math, booleans, comparison operators, string methods, lists, dictionaries, for loops, if statements. Pause frequently to ask if anyone has questions.
 
-Any time you see `✍️ Try it yourself`, hit the brakes and give everyone time to play around with whatever concept under discussion.
+Any time you see `✍️ Try it yourself`, hit the brakes and give everyone time to play around with whatever concept you're discussing.
 
 ### Debugging
 If you can, find an opportunity when someone has gotten an error and take 5 minutes to walk through basic debugging strategy: Reading the traceback error from bottom to top, strategic Googling, etc.
