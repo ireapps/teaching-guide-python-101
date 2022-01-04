@@ -20,18 +20,13 @@ Attendees should leave with a basic understanding of:
 - Where to find [instructions for installing Python on their own machines](https://docs.google.com/document/d/1cYmpfZEZ8r-09Q6Go917cKVcQk_d0P61gm0q8DAdIdg/edit#)
 - How to find help when they get stuck
 
-## Things you definitely do not need to cover
-- Importing modules
-- Literally anything related to virtual environments or third-party package management
-- Specific code to accomplish data analysis, web scraping or anything else
-
 ## General approach
 I Do, We Do, You Do. Demonstrate a concept, go through it together, then give them plenty of time to experiment on their own while you and your coach walk around and answer questions (see sections marked `✍️ Try it yourself`). The pace will be slower than you think, and that's OK! It's not the end of the world if you don't get through everything.
 
 Most people who come to this class will have _zero_ experience with programming, so be empathetic and try to remember how frustrating it is to feel lost.
 
 ## Class setup
-We'll have the latest version of Python 3 and [pipenv](https://pipenv.readthedocs.io) to manage the virtual environment and one dependency (`jupyter`), which will already have been installed and tested prior to your session.
+We'll have the latest version of Python 3 installed. We're using the standard library's `venv` module to manage the virtual environment and project dependency (`jupyter`), which will already have been installed and tested prior to your session. Please refer to the Python setup sheet for the conference and let us know if you have any questions.
 
 ## Class outline
 
@@ -39,7 +34,9 @@ We'll have the latest version of Python 3 and [pipenv](https://pipenv.readthedoc
 Begin the class by (slowly!) walking everyone through the process of activating their virtual environments and launching Jupyter:
 1. Open Terminal (or `cmd` or `cygwin` if you're on a PC)
 2. `cd` into your class directory
-3. `pipenv shell`
+3. Activate the virtual environment:
+    - Macs: `source env/bin/activate`
+    - PCs: `.\env\Scripts\activate`
 4. `jupyter notebook`
 
 It will take everyone a few minutes to get going. You'll also probably get some questions about what, exactly, you're doing at this step. Try to avoid a lengthy digression into virtual environments -- it's beyond the scope of this hourlong session, so maybe offer to talk to them after class, or send 'em our way: [training@ire.org](mailto:training@ire.org).
@@ -66,10 +63,15 @@ Unlikely! But if you have extra time, oversee some unstructured lab time -- they
 
 ## Run the notebook
 
-You'll need the latest version of Python 3 and [pipenv](https://pipenv.readthedocs.io) installed on your computer. [Here's our install guide](https://docs.google.com/document/d/1cYmpfZEZ8r-09Q6Go917cKVcQk_d0P61gm0q8DAdIdg/edit?usp=sharing).
+You'll need the latest version of Python 3 installed on your computer. [Here's our install guide](https://docs.google.com/document/d/1cYmpfZEZ8r-09Q6Go917cKVcQk_d0P61gm0q8DAdIdg/edit?usp=sharing).
 
 1. Clone or [download/unzip](https://github.com/ireapps/teaching-guide-python-101/archive/master.zip) this repo onto your computer
 2. In your command-line interface, `cd` into the folder
-3. `pipenv install`
-4. `pipenv shell`
-5. `jupyter notebook`
+3. Create a virtual environment:
+    - Macs: `python3 -m venv env`
+    - PCs: `python -m venv env`
+4. Activate the virtual environment:
+    - Macs: `source env/bin/activate`
+    - PCs: `.\env\Scripts\activate`
+5. `pip install -r requirements.txt`
+6. `jupyter notebook`
